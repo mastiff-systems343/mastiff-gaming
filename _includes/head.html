@@ -2,14 +2,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   {% seo %}
+  
+  <!-- NES.css (UI Framework) -->
   <link rel="stylesheet" href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css?v={{ site.github.build_revision }}">
+  
+  <!-- Main CSS (Fixes relative URL issue) -->
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  
+  <!-- HTML5 Shiv for IE9 and below -->
   <!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
+  
+  <!-- Scale Fix JS (Fixes relative URL issue) -->
   <script src="{{ "/assets/js/scale-fix.js" | relative_url }}"></script>
-  {% if jekyll.environment == 'production' and  site.google_analytics %}
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
 </head>
