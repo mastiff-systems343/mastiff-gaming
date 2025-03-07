@@ -1,4 +1,4 @@
-title: Jekyll 8bit
+title: Mastiff Gaming
 description: A Jekyll theme inspired by classic 8bit games.
 remote_theme: julianolf/jekyll-theme-8bit
 logo: nes-kirby
@@ -7,6 +7,9 @@ plugins:
  - jekyll-paginate
  - jekyll-seo-tag
 paginate: 2
+paginate_path: "/page:num/"
+url: "http://localhost:4000"  # Or your actual site URL
+baseurl: ""  # If your site is in a subdirectory, set it like "/blog"
 social:
   twitter: https://twitter.com/username
   facebook: https://facebook.com/username
